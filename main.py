@@ -32,7 +32,7 @@ def main(stdscr):
 
 def tes():
     os.system("clear")
-    print("ini tes")
+    print("testing")
 
 # call the function
 if __name__ == "__main__":
