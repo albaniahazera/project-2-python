@@ -1,1 +1,1 @@
-"# os-for-termux-using-python" 
+proyek 2 python
