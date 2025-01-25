@@ -1,12 +1,6 @@
-<<<<<<< HEAD
-import getpass, os
+import getpass, os, sys
 from cryptography.fernet import Fernet
 
-=======
-from cryptography.fernet import Fernet
-import getpass
-import os, time
->>>>>>> fc65cd97b029ec212737f6ca9d6d6fa577405f37
 
 #start login function 
 def generate_key():
@@ -54,11 +48,9 @@ def login():
     
     username, password = load_credentials()
     if username and password:
-<<<<<<< HEAD
+        sys.stdout.flush()
         print(f"\n\n\t\tWelcome back, {username}!")
-=======
-        print(f"Welcome back, {username}!")
->>>>>>> fc65cd97b029ec212737f6ca9d6d6fa577405f37
+        sys.stdout.flush()
     else:
         print("\n\t\tFirst time setup\n")
         username = input("Enter your username: ")
@@ -71,17 +63,16 @@ def login():
                 os.system("clear")
                 print("Passwords do not match. Please try again.")
         save_credentials(username, password)
-        print("Data has saved !")
+        sys.stdout.flush()
+        print("\n\n\t\tData has saved !")
+        sys.stdout.flush()
 # end login function
 
 if __name__ == "__main__":
-<<<<<<< HEAD
     generate_key()
     load_key()
     encrypt_message()
     decrypt_message()
     save_credentials()
     load_credentials()
-=======
->>>>>>> fc65cd97b029ec212737f6ca9d6d6fa577405f37
     login()
