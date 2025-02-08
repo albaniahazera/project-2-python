@@ -1,30 +1,30 @@
 from cx_Freeze import setup, Executable
 
-# Opsi Build
+# Build
 buildOptions = dict(
     packages=['termcolor', 
               'cryptography'
-              ],  # Sertakan library eksternal di sini
+              ], 
     includes=[],
     include_files=[
         'menu.py',
         'login_data.py',
-        'check.py',  # File tambahan yang mungkin dibutuhkan
+        'check.py',  
     ],
     excludes=[]
 )
 
-# Tentukan skrip utama aplikasi Anda
-base = None  # Gunakan None untuk aplikasi konsol di Linux
+base = None  # None untuk aplikasi konsol di Linux
 
+# Skrip utama aplikasi Anda
 executables = [
     Executable('main.py', base=base)
 ]
 
 setup(
-    name='SYMPLE_OS_WITH_PYTHON',
+    name='PROJECT-2-PYTHON',
     version='1.0',
-    description='My Project Os With Python3',
+    description='Terminal Project With Python3',
     options={'build_exe': buildOptions},
     executables=executables
 )
